@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-md-1"></div>
+        <div class="col-md-11" *ngFor="let item of users" class="col-md-12">
+        <ul>
+            <li> <b>{{item.id}}- {{item.name}}</b> - <em> {{item.username}}</em> </li>
+            <li> <u>Address:</u> {{item.address.street}}, {{item.address.suite}} - {{item.address.city}}</li>
+            <li><u>ZIP:</u><em> {{item.address.zipcode}}</em> ({{item.address.geo.lat}}, {{item.address.geo.lng}})</li>
+            <li> <u>Company:</u> {{item.company.name}}</li>
+            <li>"{{item.company.catchPhrase}}"</li>
+            <li>{{item.company.bs}}</li>
+            <br>
+        </ul>       
+        </div>
+    </div>
+</div>

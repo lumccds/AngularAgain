@@ -1,0 +1,12 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Segoe UI', sans-serif;
+}
+.container-fluid{
+    background-color: #ffb0df;
+    height: 59px;
+}
+h1{
+    color: white;
+}
