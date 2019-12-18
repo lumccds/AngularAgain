@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-md-1"></div>
+        <div class="col-md-11">
+            <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">UserID</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Completo?</th>
+                </tr>
+            </thead>
+            </table>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-11" *ngFor="let item of tarefas">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th scope="row">{{item.userId}}</th>
+                    <td>{{item.id}}</td>
+                    <td>{{item.title}}</td>
+                    <td>{{item.completed}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

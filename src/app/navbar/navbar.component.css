@@ -12,6 +12,17 @@ nav{
     background: #5abbea;
 }   
 li{
-    margin-left: 10%;
-    margin-right: 10%;
+    /*margin-left: 10%;
+    margin-right: 10%;*/
+    width: 150px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-shadow: 1%;
+    color: #ffb0df;
+    font-weight: bold;
 }

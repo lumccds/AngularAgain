@@ -1,0 +1,37 @@
+<div class="row mt-3">
+    <div class="col-md-1"></div>
+    <div class="col-md-1">
+        <input type="number" placeholder="Digite o ID" id="inputUser" [(ngModel)]="idBusca">
+        <label for="inputUser" style="font-weight: bold;">Número de ID:</label>
+        <span *ngIf='_msgErro' style="font-weight: bold;">{{_msgErro}}</span>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <button (click)="pesquisar();">Pesquisar</button>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+<div *ngIf="_user != null">
+    <div class="row mt-3">
+        <div class="col-md-2"></div>
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-body">
+                    <h5>{{_user.id}}- {{_user.name}}</h5>
+                    <ul>
+                        <li> <u>Username</u> - <em> {{_user.username}}</em> </li>
+                        <li> <u>Address:</u> {{_user.address.street}}, {{_user.address.suite}} - {{_user.address.city}}
+                        </li>
+                        <li><u>ZIP:</u><em> {{_user.address.zipcode}}</em> ({{_user.address.geo.lat}},
+                            {{_user.address.geo.lng}})
+                        </li>
+                        <li> <u>Company:</u> {{_user.company.name}}</li>
+                        <li>"{{_user.company.catchPhrase}}"</li>
+                        <li>{{_user.company.bs}}</li>
+                        <br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,3 +10,7 @@
 h1{
     color: white;
 }
+.col-md-11{
+    position: fixed;
+    left: 10%;
+}

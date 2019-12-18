@@ -1,0 +1,32 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Segoe UI', sans-serif;
+}
+li{
+    list-style-type: none;
+    margin-left: 10%;
+}
+span{
+    color: red;
+}
+.card{
+    width: 35%;
+    padding: 1%;
+    border: #ffb0df;
+}
+button{
+    border: none;
+    border-radius: 3px;
+    background-color: #ffb0df;
+    color: #5abbea;
+    padding: 1%;
+    width: 100px;
+    font-weight: bold;
+}
+input{
+    width: 200px;
+    height: 35.81px;
+    font-weight: bold;
+    border-radius: 3px;
+}
