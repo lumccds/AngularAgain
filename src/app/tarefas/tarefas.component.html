@@ -1,6 +1,9 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            <input type="number" placeholder="Digite o ID" id="inputUser" [(ngModel)]="idBusca">
+            <button (click)="pesquisar();">Pesquisar</button>
+        </div>
         <div class="col-md-10">
 
 <div id="estilotitulo">
@@ -15,12 +18,12 @@
                 <th scope="col">Completo?</th>
             </tr>
         </thead>
-            <tbody *ngFor='let item of tarefas'>
+            <tbody *ngIf='_tarefas'>
                 <tr>
-                    <th scope="row">{{item.userId}}</th>
-                    <td>{{item.id}}</td>
-                    <td>{{item.title}}</td>
-                    <td>{{item.completed}}</td>
+                    <th scope="row">{{_tarefas.userId}}</th>
+                    <td>{{_tarefas.id}}</td>
+                    <td>{{_tarefas.title}}</td>
+                    <td>{{_tarefas.completed}}</td>
                 </tr>
             </tbody>
     </table>

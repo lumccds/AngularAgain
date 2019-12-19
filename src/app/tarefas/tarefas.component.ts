@@ -9,6 +9,10 @@ import { TodosService } from '../servico/todos.service';
 })
 export class TarefasComponent implements OnInit {
 
+  private idBusca : number;
+  private _msgErro: string = null;
+  private _tarefas: Tarefas = null;
+
   constructor(private todosSrv: TodosService) { }
 
   tarefas: Tarefas[];
@@ -21,6 +25,13 @@ export class TarefasComponent implements OnInit {
     this.todosSrv.buscaTarefas().subscribe((tarefasOut: Tarefas[]) => {
       this.tarefas = tarefasOut;
       console.log(this.tarefas);
+    });
+
+  }
+
+  public pesquisar(){
+    this.todosSrv.filtraTarefas(this.idBusca).subscribe((res: Tarefas) =>{
+      this._tarefas = res;
     });
 
   }
